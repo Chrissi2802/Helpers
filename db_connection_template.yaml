@@ -1,0 +1,15 @@
+#---------------------------------------------------------------------------------------------------#
+# File name: db_connection_template.yaml                                                            #
+# Autor: Chrissi2802                                                                                #
+# Created on: 19.12.2022                                                                            #
+#---------------------------------------------------------------------------------------------------#
+# This file provides the login data for the SQL Server.
+
+---
+# Please adapt to your application
+server: server_name
+database: database_name
+username: user_name
+password: user_password
+
+...
