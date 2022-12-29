@@ -1,0 +1,15 @@
+#---------------------------------------------------------------------------------------------------#
+# File name: emails_template.yaml                                                                   #
+# Autor: Chrissi2802                                                                                #
+# Created on: 29.12.2022                                                                            #
+#---------------------------------------------------------------------------------------------------#
+# This file contains the login data to send emails.
+
+---
+
+email: email_address
+password: password
+host: host_name
+port: port
+
+...
