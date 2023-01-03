@@ -14,4 +14,13 @@ This repository contains several helper files for python. Help functions and cla
 | [helpers_ann.py](helpers_ann.py)                                | contains auxiliary functions for artificial neural network (ann)   |
 | [helpers_general.py](helpers_general.py)                        | contains general help functions                               |
 | [helpers_ml.py](helpers_ml.py)                                  | contains auxiliary functions for machine learning (ml)        |
+| [selftest.py](selftest.py)                                      | contains a class for checking Python files                    |
+
+
+### Checks during selftest
+- check_pyflakes: checks Python source files for errors
+- check_vulture: finds unused code
+- check_file_imported_somewhere: checks if the files were imported into one of the other files
+- check_asserts: checks if asserts are present in the main block `if (__name__ == "__main__"):`
+- check_main_block: executes the code that is written at `if (__name__ == "__main__"):`
 
