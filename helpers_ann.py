@@ -70,9 +70,9 @@ def plot_loss_and_acc(history, fold = -1):
     xaxis = list(range(1, epochs + 1))
     ax1.set_xlabel("Epochs")
     ax1.set_ylabel("Loss")
+    ax2 = ax1.twinx()
     ax2.set_ylabel("Accuracy in %")
     ax2.set_ylim(0.0, 100.0)
-    ax2 = ax1.twinx()
 
     train_loss_plot = ax1.plot(xaxis, train_loss, label = "Training Loss", color = "red")       # Training loss
     train_acc_plot = ax2.plot(xaxis, train_acc, label = "Training Accuracy", color = "fuchsia") # Training accuracy
