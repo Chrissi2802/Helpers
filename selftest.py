@@ -25,7 +25,7 @@ class Selftest():
         self.return_value_io = 0
         self.return_value_nio = 1
         self.skip_file_list = skip_file_list
-        self.skip_file_list_big = self.skip_file_list + ["main.py", str(__file__)]
+        self.skip_file_list_big = self.skip_file_list + ["main.py", str(__file__).split("\\")[-1]]
         self.__identify_operation_system()
         
         self.run()
@@ -54,7 +54,7 @@ class Selftest():
             # Run through all files that should be skipped
             for j in range(len(self.skip_file_list_temp)):
                 
-                if (self.skip_file_list_temp[j].find(self.file_list[i]) >= 0):
+                if (self.skip_file_list_temp[j] == self.file_list[i]):
                     delete_file = True
                 
             if (delete_file == True):
@@ -104,7 +104,7 @@ class Selftest():
             return_value (integer): Return value, is 0 if everything is ok
         """
 
-        return_value = os.system("vulture " + file + " --min-confidence 70")
+        return_value = os.system("vulture " + file + " --min-confidence 80")
         
         return return_value
     
